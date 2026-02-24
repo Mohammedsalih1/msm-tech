@@ -233,7 +233,7 @@ export default function Hero() {
 
           {/* Left Side: Visual / Floating Glass Card */}
           <div 
-            className={`flex justify-center lg:justify-end transition-all duration-1000 delay-500 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+            className={`hidden justify-center lg:justify-end transition-all duration-1000 delay-500 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
           >
             <div 
               className="floating-card w-full max-w-sm rounded-[2rem] p-8 backdrop-blur-md relative overflow-hidden"
