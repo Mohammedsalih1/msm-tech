@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 const words = ["طموحك", "رؤيتك", "علامتك", "نجاحك"];
 
@@ -120,7 +121,7 @@ export default function Hero() {
 
             {/* Subheading */}
             <p 
-              className={`text-base sm:text-lg md:text-[16px] text-right leading-relaxed max-w-[600px] transition-all duration-1000 delay-200 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`text-base sm:text-lg md:text-[16px] text-right leading-relaxed max-w-150 transition-all duration-1000 delay-200 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ color: '#A1A1B3' }}
             >
               في MSM Tech لا نبني مجرد مواقع إلكترونية،
@@ -178,7 +179,6 @@ export default function Hero() {
               animation: "gradientMove 3s linear infinite",
             }}
           ></span>
-
           {/* Content */}
           <span className="relative flex items-center gap-2 z-10">
             تواصل معنا
@@ -233,57 +233,9 @@ export default function Hero() {
 
           {/* Left Side: Visual / Floating Glass Card */}
           <div 
-            className={`hidden justify-center lg:justify-end transition-all duration-1000 delay-500 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+            className={`justify-center lg:justify-end transition-all duration-1000 delay-500 transform ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
           >
-            <div 
-              className="floating-card w-full max-w-sm rounded-[2rem] p-8 backdrop-blur-md relative overflow-hidden"
-              style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
-              }}
-            >
-              {/* Card top gradient line */}
-              <div 
-                className="absolute top-0 left-0 w-full h-1"
-                style={{ backgroundImage: 'linear-gradient(90deg, #7C3AED, #2959DF, #241274)' }}
-              />
-              
-              <h3 className="text-xl font-bold mb-2" style={{ color: '#EAEAF0' }}>مشروع رقمي احترافي</h3>
-              <p className="text-sm mb-10" style={{ color: '#A1A1B3' }}>نحول أفكارك إلى واقع ملموس</p>
-              
-              <div className="space-y-6">
-                <div className="flex items-center gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center" style={{ background: 'rgba(124,58,237,0.1)' }}>
-                    <span className="font-bold text-xl" style={{ color: '#7C3AED' }}>120+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-lg" style={{ color: '#EAEAF0' }}>مشاريع</h4>
-                    <p className="text-sm mt-0.5" style={{ color: '#A1A1B3' }}>مكتملة بنجاح</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center" style={{ background: 'rgba(41,89,223,0.1)' }}>
-                    <span className="font-bold text-xl" style={{ color: '#2959DF' }}>50+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-lg" style={{ color: '#EAEAF0' }}>عملاء</h4>
-                    <p className="text-sm mt-0.5" style={{ color: '#A1A1B3' }}>شركاء نجاح</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center" style={{ background: 'rgba(36,18,116,0.3)' }}>
-                    <span className="font-bold text-xl" style={{ color: '#7C3AED' }}>5+</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-lg" style={{ color: '#EAEAF0' }}>سنوات خبرة</h4>
-                    <p className="text-sm mt-0.5" style={{ color: '#A1A1B3' }}>في السوق الرقمي</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Image width={1024} height={1024} className='rounded-3xl' src="/heroImg.jpeg" />
           </div>
         </div>
       </div>
