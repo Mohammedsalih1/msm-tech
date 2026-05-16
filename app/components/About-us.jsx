@@ -38,7 +38,7 @@ export default function AboutUs() {
     { value: '98%', label: 'نسبة رضا' },
   ];
   return (
-    <section 
+    <section id='about'
       className="relative w-full overflow-hidden"
       style={{
         backgroundColor: '#0B0B14',

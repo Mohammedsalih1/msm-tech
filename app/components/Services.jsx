@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
-import { MonitorSmartphone, PenTool, LayoutDashboard, Rocket, ArrowLeft } from 'lucide-react';
+import { MonitorSmartphone, PenTool, LayoutDashboard, Rocket, ArrowLeft, Server } from 'lucide-react';
 function useFadeIn(delay = 0) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -54,11 +54,18 @@ export default function Services() {
       icon: Rocket,
       anim: useFadeIn(600),
       gradient: "from-[#241274] to-[#2959DF]"
+    },
+    {
+      title: "استضافة وإدارة المواقع",
+      description: "نوفر حلول استضافة متكاملة مع إدارة تقنية كاملة تضمن سرعة، أمان، واستقرار موقعك على مدار الساعة.",
+      icon: Server,
+      anim: useFadeIn(750),
+      gradient: "from-[#241274] to-[#2959DF]"
     }
   ];
   return (
     <section 
-      dir="rtl"
+      dir="rtl" id='services'
       className="relative w-full py-32 overflow-hidden font-sans"
       style={{ 
         backgroundColor: '#0B0B14',

@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section 
+    <section id='services'
       dir="rtl"
       className="relative w-full min-h-screen pt-4 md:pt-30 overflow-hidden flex items-center justify-center"
       style={{ 
@@ -44,6 +44,23 @@ export default function Hero() {
           }
           .floating-card {
             animation: float 6s ease-in-out infinite;
+          }
+          @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          
+          .btn-gradient {
+            background: linear-gradient(90deg, #7C3AED, #2959DF, #241274, #7C3AED);
+            background-size: 300% 100%;
+            animation: gradient-shift 4s linear infinite;
+            transition: all 0.3s ease;
+          }
+          
+          .btn-gradient:hover {
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+            transform: scale(1.02);
           }
         `}
       </style>
@@ -167,7 +184,7 @@ export default function Hero() {
             }}>
           {/* Animated Gradient Layer */}
           <span
-            className="
+            className=" btn-gradient
             absolute inset-0
             transition-all duration-500
             animate-gradient-move
@@ -180,7 +197,7 @@ export default function Hero() {
             }}
           ></span>
           {/* Content */}
-          <span className="relative flex items-center gap-2 z-10">
+          <a href='#contact' className="relative flex items-center gap-2 z-10">
             تواصل معنا
 
             {/* Arrow */}
@@ -198,7 +215,7 @@ export default function Hero() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
             </svg>
-          </span>
+          </a>
 
           {/* Glow Effect */}
           <span

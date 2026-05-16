@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 const NAV_LINKS = [
   { label: "الرئيسية", href: "#" },
-  { label: "من نحن", href: "#" },
-  { label: "خدماتنا", href: "#" },
-  { label: "أعمالنا", href: "#" },
-  { label: "تواصل معنا", href: "#" },
+  { label: "من نحن", href: "#about" },
+  { label: "خدماتنا", href: "#services" },
+  { label: "أعمالنا", href: "#work" },
+  { label: "تواصل معنا", href: "#contact" },
 ];
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,6 +69,24 @@ export default function Navbar() {
               background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
               backgroundSize: "200% 100%",
             }}>
+              {/* new span */}
+              <span
+                className="
+                absolute inset-0 rounded-full
+                opacity-0 group-hover:opacity-100
+                transition-opacity duration-300
+                pointer-events-none
+                "
+                style={{
+                  padding: '1px',
+                  background: 'linear-gradient(120deg, #7C3AED, #2959DF, #7C3AED)',
+                  WebkitMask:
+                    'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)',
+                  WebkitMaskComposite: 'xor',
+                  maskComposite: 'exclude',
+                  animation: 'borderMove 3s linear infinite'
+                }}
+              ></span>
           {/* Animated Gradient Layer */}
           <span
             className="
@@ -80,12 +98,12 @@ export default function Navbar() {
             style={{
               background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
               backgroundSize: "200% 100%",
-              animation: "gradientMove 3s linear infinite",
+              animation: "gradientMove 5s ease infinite",
             }}
           ></span>
 
           {/* Content */}
-          <span className="relative flex items-center gap-2 z-10">
+          <a href='#contact' className="relative flex items-center gap-2 z-10">
             ابدأ مشروعك
 
             {/* Arrow */}
@@ -94,7 +112,7 @@ export default function Navbar() {
               w-4 h-4
               transition-transform duration-300
               rotate-180
-              group-hover:rotate-180
+              group-hover:translate-x-1
               "
               fill="none"
               stroke="currentColor"
@@ -103,7 +121,7 @@ export default function Navbar() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
             </svg>
-          </span>
+          </a>
 
           {/* Glow Effect */}
           <span

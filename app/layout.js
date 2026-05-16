@@ -1,12 +1,17 @@
 // import { Geist, Geist_Mono } from "next/font/google";
-import { Cairo } from "next/font/google"
+import { Cairo, Tajawal } from "next/font/google"
 import "./globals.css";
 
 
 const cairo = Cairo({
   subsets: ["arabic"],
   weight: ["400", "600", "700"],
-})
+});
+const tajawal = Tajawal({
+  subsets: ["arabic"],
+  weight: ["500", "700"],
+  variable: "--font-header",
+});
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -27,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html dir="rtl" lang="en">
       <body
-        className={cairo.className}
+        className={tajawal.className}
       >
         {children}
       </body>
