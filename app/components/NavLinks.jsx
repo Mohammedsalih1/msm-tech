@@ -1,5 +1,5 @@
 'use client'
-import Btn from '../Reuse/Btn'
+import PrimaryBtn from '../ui/PrimaryBtn'
 import Image from "next/image";
 import { useState, useEffect } from "react";
 const NAV_LINKS = [
@@ -30,6 +30,27 @@ export default function Navbar() {
             : "bg-transparent py-6"
         }`}
       >
+        <style>
+          {`
+            @keyframes gradient-shift {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+            
+            .btn-gradient {
+              background: linear-gradient(90deg, #7C3AED, #2959DF, #241274, #7C3AED);
+              background-size: 300% 100%;
+              animation: gradient-shift 4s linear infinite;
+              transition: all 0.3s ease;
+            }
+            
+            .btn-gradient:hover {
+              box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+              transform: scale(1.02);
+            }
+          `}
+        </style>
         {/* Subtle animated purple glow behind navbar on scroll */}
         {isScrolled && (
           <div className="absolute inset-0 -z-10 bg-[rgba(124,58,237,0.05)] blur-2xl transition-opacity duration-500" />
@@ -57,91 +78,14 @@ export default function Navbar() {
             ))}
           </div>
           <div className="hidden lg:flex items-center gap-6 mr-0">
-          <button
-            className="cursor-pointer
-            relative overflow-hidden group
-            px-6 py-3 rounded-full
-            text-sm font-semibold
-            text-[#EAEAF0]
-            transition-all duration-300
-            "
-            style={{
-              background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-              backgroundSize: "200% 100%",
-            }}>
-              {/* new span */}
-              <span
-                className="
-                absolute inset-0 rounded-full
-                opacity-0 group-hover:opacity-100
-                transition-opacity duration-300
-                pointer-events-none
-                "
-                style={{
-                  padding: '1px',
-                  background: 'linear-gradient(120deg, #7C3AED, #2959DF, #7C3AED)',
-                  WebkitMask:
-                    'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)',
-                  WebkitMaskComposite: 'xor',
-                  maskComposite: 'exclude',
-                  animation: 'borderMove 3s linear infinite'
-                }}
-              ></span>
-          {/* Animated Gradient Layer */}
-          <span
-            className="
-            absolute inset-0
-            transition-all duration-500
-            animate-gradient-move
-            group-hover:animate-none
-            "
-            style={{
-              background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-              backgroundSize: "200% 100%",
-              animation: "gradientMove 5s ease infinite",
-            }}
-          ></span>
-
-          {/* Content */}
-          <a href='#contact' className="relative flex items-center gap-2 z-10">
-            ابدأ مشروعك
-
-            {/* Arrow */}
-            <svg
-              className="
-              w-4 h-4
-              transition-transform duration-300
-              rotate-180
-              group-hover:translate-x-1
-              "
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </a>
-
-          {/* Glow Effect */}
-          <span
-            className="
-            absolute inset-0 rounded-full
-            opacity-0 group-hover:opacity-100
-            transition-opacity duration-300
-            "
-            style={{
-              boxShadow: "0 0 30px rgba(124,58,237,0.6)",
-            }}></span>
-
-          </button>
+          <PrimaryBtn label="ابدا مشروعك" to="#contact"/>
           </div>
           {/* Mobile Header Layout */}
           <div className="flex lg:hidden justify-between items-center w-full">
             {/* Animated Hamburger Icon */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex flex-col justify-center items-center w-8 h-8 space-y-[6px] relative z-50"
+              className="flex cursor-pointer flex-col justify-center items-center w-8 h-8 space-y-[6px] relative z-50"
               aria-label="Toggle Menu"
             >
               <span
@@ -201,68 +145,9 @@ export default function Navbar() {
             ))}
           </div>
           
-          <button
-            className="cursor-pointer w-fit mx-auto
-            relative overflow-hidden group
-            px-6 py-3 rounded-full
-            text-sm font-semibold
-            text-[#EAEAF0]
-            transition-all duration-300
-            "
-            style={{
-              background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-              backgroundSize: "200% 100%",
-            }}>
-          {/* Animated Gradient Layer */}
-          <span
-            className="
-            absolute inset-0
-            transition-all duration-500
-            animate-gradient-move
-            group-hover:animate-none
-            "
-            style={{
-              background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-              backgroundSize: "200% 100%",
-              animation: "gradientMove 3s linear infinite",
-            }}
-          ></span>
-
-          {/* Content */}
-          <span className="relative flex items-center gap-2 z-10">
-            ابدأ مشروعك
-
-            {/* Arrow */}
-            <svg
-              className="
-              w-4 h-4
-              transition-transform duration-300
-              rotate-180
-              group-hover:rotate-180
-              "
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </span>
-
-          {/* Glow Effect */}
-          <span
-            className="
-            absolute inset-0 rounded-full
-            opacity-0 group-hover:opacity-100
-            transition-opacity duration-300
-            "
-            style={{
-              boxShadow: "0 0 30px rgba(124,58,237,0.6)",
-            }}></span>
-
-          </button>
-                </div>
-            </div>
+          <PrimaryBtn label="ابدا مشروعك" to="#contact" size="w-fit" />
+        </div>
+      </div>
     </>
     );
 }

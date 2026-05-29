@@ -182,7 +182,7 @@ export default function ContactAndFooter() {
                   <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
                     <Mail size={20} className="text-[#2959DF]" />
                   </div>
-                  <span className="text-lg font-mono" dir="ltr">montysalih590@gmail.com</span>
+                  <span className="text-lg font-mono" dir="ltr">info@msm.technology</span>
                 </div>
                 <div className="flex items-center gap-4 text-[#A1A1B3]">
                   <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
@@ -335,9 +335,9 @@ export default function ContactAndFooter() {
             <div className="flex flex-col gap-6">
               <h4 className="text-xl font-bold text-white mb-2">معلومات التواصل</h4>
               <div className="flex flex-col gap-4">
-                <a href="mailto:montysalih590@gmail.com" className="flex items-center gap-3 text-[#A1A1B3] hover:text-white transition-colors">
+                <a href="mailto:info@msm.technology" className="flex items-center gap-3 text-[#A1A1B3] hover:text-white transition-colors">
                   <Mail size={18} className="text-[#7C3AED]" />
-                  <span className="font-mono" dir="ltr">montysalih590@gmail.com</span>
+                  <span className="font-mono" dir="ltr">info@msm.technology</span>
                 </a>
                 <a href="tel:+249916246149" className="flex items-center gap-3 text-[#A1A1B3] hover:text-white transition-colors">
                   <Phone size={18} className="text-[#7C3AED]" />

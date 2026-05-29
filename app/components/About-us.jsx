@@ -68,7 +68,7 @@ export default function AboutUs() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-black whitespace-nowrap pointer-events-none select-none z-0 tracking-widest uppercase" 
         style={{ opacity: 0.03, color: '#ffffff' }}
       >
-        ABOUT MSM TECH
+        MSM TECH
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-[120px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">

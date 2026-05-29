@@ -284,6 +284,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ExternalLink, Github, Code2, Layers, Cpu } from 'lucide-react';
+import PrimaryBtn from '../ui/PrimaryBtn';
 function useFadeIn(delay = 0) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -453,9 +454,7 @@ export default function Portfolio() {
                     alt={project.title} 
                     className="project-image"
                   />
-                  <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-md border border-white/10 p-2.5 rounded-xl flex items-center justify-center">
-                    {project.icon}
-                  </div>
+
               </div>
               {/* Bottom: Content Section */}
               <div className="flex flex-col flex-grow">
@@ -470,83 +469,7 @@ export default function Portfolio() {
                 <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-auto">
                   
                   <div className="flex items-center gap-2">
-                  <a target='_blank' href={project.url}
-                      className="cursor-pointer
-                      relative overflow-hidden group
-                      px-6 py-3 rounded-full
-                      text-sm font-semibold
-                      text-[#EAEAF0]
-                      transition-all duration-300
-                      "
-                      style={{
-                        background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-                        backgroundSize: "200% 100%",
-                      }}>
-                        {/* new span */}
-                        <span
-                          className="
-                          absolute inset-0 rounded-full
-                          opacity-0 group-hover:opacity-100
-                          transition-opacity duration-300
-                          pointer-events-none
-                          "
-                          style={{
-                            padding: '1px',
-                            background: 'linear-gradient(120deg, #7C3AED, #2959DF, #7C3AED)',
-                            WebkitMask:
-                              'linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)',
-                            WebkitMaskComposite: 'xor',
-                            maskComposite: 'exclude',
-                            animation: 'borderMove 3s linear infinite'
-                          }}
-                        ></span>
-                    {/* Animated Gradient Layer */}
-                    <span
-                      className="
-                      absolute inset-0
-                      transition-all duration-500
-                      animate-gradient-move
-                      group-hover:animate-none
-                      "
-                      style={{
-                        background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-                        backgroundSize: "200% 100%",
-                        animation: "gradientMove 5s ease infinite",
-                      }}
-                    ></span>
-
-                    {/* Content */}
-                    <span className="relative flex items-center gap-2 z-10">
-                      عرض المشروع
-                      {/* Arrow */}
-                      <svg
-                        className="
-                        w-4 h-4
-                        transition-transform duration-300
-                        rotate-180
-                        group-hover:translate-x-1
-                        "
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                      </svg>
-                    </span>
-
-                    {/* Glow Effect */}
-                    <span
-                      className="
-                      absolute inset-0 rounded-full
-                      opacity-0 group-hover:opacity-100
-                      transition-opacity duration-300
-                      "
-                      style={{
-                        boxShadow: "0 0 30px rgba(124,58,237,0.6)",
-                      }}></span>
-
-                  </a>
+                    <PrimaryBtn label="عرض المشروع" to={project.url} blank="_blank" />
                   </div>
                 </div>
               </div>

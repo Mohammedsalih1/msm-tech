@@ -2,8 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import Image from 'next/image';
+import PrimaryBtn from '../ui/PrimaryBtn';
 
 const words = ["طموحك", "رؤيتك", "علامتك", "نجاحك"];
+const SocialLinks = [
+  {
+    icon: Facebook,
+    url: "https://www.facebook.com/share/1AmdB5rh8k/"
+  },
+  {
+    icon: Instagram,
+    url: "https://www.instagram.com/msmtechnology/"
+  },
+  {
+    icon: Twitter,
+    url: "https://x.com/msm_technology"
+  }
+]
 
 export default function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -81,16 +96,16 @@ export default function Hero() {
 
       {/* Social Icons (Vertical, fixed far side) */}
       <div className="hidden lg:flex flex-col absolute left-8 top-1/2 -translate-y-1/2 gap-6 z-20">
-        {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
-          <a 
+        {SocialLinks.map((link, idx) => (
+          <a target='_blank'
             key={idx} 
-            href="#" 
+            href={link.url} 
             className="transition-all duration-300 transform hover:scale-110"
             style={{ color: 'rgba(255,255,255,0.5)' }}
             onMouseEnter={(e) => e.currentTarget.style.color = '#7C3AED'}
             onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
           >
-            <Icon strokeWidth={1.5} size={24} />
+            <link.icon strokeWidth={1.5} size={24} />
           </a>
         ))}
       </div>
@@ -152,97 +167,22 @@ export default function Hero() {
             <div 
               className={`pt-4 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
-              {/* <button 
-                className="px-10 py-4 rounded-full font-bold text-white transition-all duration-500 ease-out transform hover:scale-105"
-                style={{
-                  background: 'linear-gradient(90deg, #7C3AED, #2959DF, #241274, #7C3AED)',
-                  backgroundSize: '300% 100%',
-                  backgroundPosition: '0 0'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundPosition = '100% 0';
-                  e.currentTarget.style.boxShadow = '0 0 30px rgba(124,58,237,0.6)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundPosition = '0 0';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                تواصل معنا
-              </button> */}
-            <button
-            className="cursor-pointer w-fit mx-auto
-            relative overflow-hidden group
-            px-6 py-3 rounded-full
-            text-sm font-semibold
-            text-[#EAEAF0]
-            transition-all duration-300
-            "
-            style={{
-              background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-              backgroundSize: "200% 100%",
-            }}>
-          {/* Animated Gradient Layer */}
-          <span
-            className=" btn-gradient
-            absolute inset-0
-            transition-all duration-500
-            animate-gradient-move
-            group-hover:animate-none
-            "
-            style={{
-              background: "linear-gradient(90deg, #7C3AED, #2959DF, #241274)",
-              backgroundSize: "200% 100%",
-              animation: "gradientMove 3s linear infinite",
-            }}
-          ></span>
-          {/* Content */}
-          <a href='#contact' className="relative flex items-center gap-2 z-10">
-            تواصل معنا
-
-            {/* Arrow */}
-            <svg
-              className="
-              w-4 h-4
-              transition-transform duration-300
-              rotate-180
-              group-hover:rotate-180
-              "
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </a>
-
-          {/* Glow Effect */}
-          <span
-            className="
-            absolute inset-0 rounded-full
-            opacity-0 group-hover:opacity-100
-            transition-opacity duration-300
-            "
-            style={{
-              boxShadow: "0 0 30px rgba(124,58,237,0.6)",
-            }}></span>
-
-            </button>
+              <PrimaryBtn label="تواصل معنا" to="#contact"/>
+              
             {/* Mobile Social Icons */}
             <div className="md:hidden flex justify-center gap-6 mt-12 pb-8 relative z-10 w-full">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, idx) => (
-                <a 
-                  key={idx} 
-                  href="#" 
-                  className="transition-all duration-300 transform hover:scale-110"
-                  style={{ color: 'rgba(255,255,255,0.5)' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#7C3AED'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
-                >
-                  <Icon strokeWidth={1.5} size={24} />
-                </a>
-              ))}
+            {SocialLinks.map((link, idx) => (
+              <a target='_blank'
+                key={idx} 
+                href={link.url} 
+                className="transition-all duration-300 transform hover:scale-110"
+                style={{ color: 'rgba(255,255,255,0.5)' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#7C3AED'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
+              >
+                <link.icon strokeWidth={1.5} size={24} />
+              </a>
+            ))}
             </div>
             </div>
             
