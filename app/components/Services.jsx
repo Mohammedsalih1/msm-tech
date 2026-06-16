@@ -64,12 +64,12 @@ export default function Services() {
     }
   ];
   return (
-    <section 
+    <section id='service'
       dir="rtl" className="relative w-full py-32 overflow-hidden font-sans"
       style={{ 
         backgroundColor: '#0B0B14',
         fontFamily: "'Tajawal', system-ui, sans-serif" 
-      }} id="services"
+      }} 
     >
       <style>
         {`

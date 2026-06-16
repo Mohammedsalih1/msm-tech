@@ -140,7 +140,7 @@ export default function WhyNeedWebsite() {
               >
                 {/* Card Header */}
                 <div className="flex items-center justify-between p-6 md:p-8">
-                   <h3 className="text-xl md:text-2xl font-bold text-white pr-4 border-r-4 border-transparent transition-all" style={{ borderRightColor: isActive ? '#7C3AED' : 'transparent' }}>
+                   <h3 className="text-[18px] md:text-xl font-bold text-white pr-4 border-r-4 border-transparent transition-all" style={{ borderRightColor: isActive ? '#7C3AED' : 'transparent' }}>
                       {card.title}
                    </h3>
                    <div 

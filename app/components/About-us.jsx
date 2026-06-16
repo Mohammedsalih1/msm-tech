@@ -42,7 +42,7 @@ export default function AboutUs() {
       className="relative w-full overflow-hidden"
       style={{
         backgroundColor: '#0B0B14',
-        boxShadow: 'inset 0 0 150px rgba(0,0,0,0.6)'
+        // boxShadow: 'inset 0 0 150px rgba(0,0,0,0.6)'
       }}
     >
       <style>{`
@@ -59,8 +59,14 @@ export default function AboutUs() {
       {/* Background radial gradient overlay */}
       <div 
         className="absolute inset-0 pointer-events-none"
+        // style={{
+        //   background: 'radial-gradient(circle at 30% 70%, rgba(124,58,237,0.15), transparent 60%)'
+        // }}
         style={{
-          background: 'radial-gradient(circle at 30% 70%, rgba(124,58,237,0.15), transparent 60%)'
+          background: `
+            radial-gradient(circle at 30% 20%, rgba(124,58,237,0.12), transparent 60%),
+            radial-gradient(circle at 80% 80%, rgba(41,89,223,0.10), transparent 60%)
+          `
         }}
       />
       {/* Huge background text */}

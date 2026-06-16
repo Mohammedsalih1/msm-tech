@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const NAV_LINKS = [
   { label: "الرئيسية", href: "#" },
   { label: "من نحن", href: "#about" },
-  { label: "خدماتنا", href: "#services" },
+  { label: "خدماتنا", href: "#service" },
   { label: "أعمالنا", href: "#work" },
   { label: "تواصل معنا", href: "#contact" },
 ];
@@ -59,7 +59,7 @@ export default function Navbar() {
 
           {/* Logo and CTA Button */}
           <div className="hidden lg:flex items-center gap-6 mr-0">
-            <a href='#' className="cursor-pointer">
+            <a href='#top' className="cursor-pointer">
               <Image src="/logo-2.png" width={150} height={50} />
             </a>
           </div>
@@ -109,7 +109,9 @@ export default function Navbar() {
               />
             </button>
             <div className=" relative z-50 cursor-pointer">
-            <Image src="/logo-2.png" width={100} height={50} />
+              <a href="#">
+                <Image src="/logo-2.png" width={100} height={50} />
+              </a>
             </div>
           </div>
         </div>
