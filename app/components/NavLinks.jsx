@@ -59,9 +59,9 @@ export default function Navbar() {
 
           {/* Logo and CTA Button */}
           <div className="hidden lg:flex items-center gap-6 mr-0">
-            <div className=" cursor-pointer">
+            <a href='#' className="cursor-pointer">
               <Image src="/logo-2.png" width={150} height={50} />
-            </div>
+            </a>
           </div>
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-8">

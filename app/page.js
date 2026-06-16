@@ -4,7 +4,8 @@ import Hero from "./components/Hero"
 import AboutUs from "./components/About-us";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact.jsx"
+import Contact from "./components/Contact.jsx";
+import WhyNeedWebsite from "./components/WhyNeed";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <NavLinks />
       <Hero />
       <AboutUs />
+      <WhyNeedWebsite />
       <Services />
       <Portfolio /> 
       <Contact />
