@@ -157,7 +157,7 @@ export default function ContactAndFooter() {
               </div>
               {/* Title */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                جاهز تبدأ مشروعك؟
+              احصل على استشارة مجانية لمشروعك
               </h2>
               {/* Subtitle */}
               <p className="text-lg md:text-xl text-[#A1A1B3] leading-relaxed mb-10">
@@ -261,7 +261,7 @@ export default function ContactAndFooter() {
                       <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                     ) : (
                       <>
-                        <span>ابدأ مشروعك الآن</span>
+                        <span>احجز استشارة مجانية</span>
                         <Send size={18} className="transition-transform group-hover:-translate-x-1" />
                       </>
                     )}
