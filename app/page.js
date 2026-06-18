@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact.jsx";
 import WhyNeedWebsite from "./components/WhyNeed";
+import TrustAndTestimonials from "./components/Testemonals";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyNeedWebsite />
       <Services />
       <Portfolio /> 
+      <TrustAndTestimonials />
       <Contact />
     </div>
   );

@@ -330,13 +330,14 @@ export default function Portfolio() {
       icon: <Layers size={24} className="text-[#2959DF]" />,
       anim: useFadeIn(300),
     },
-    // {
-    //   title: "متجر UM Unlocker للخدمات الرقمية",
-    //   category: "E-Commerce Architecture",
-    //   description: "قمنا ببناء متجر إلكتروني متكامل لبيع وتفعيل خدمات السوفت وير للموبايل،مع تجربة مستخدم سهلة ونظام شراء واضح وسريع.",
-    //   icon: <Code2 size={24} className="text-[#7C3AED]" />,
-    //   anim: useFadeIn(500),
-    // }
+    {
+      title: "سِجِل",
+      category: "E-Commerce Architecture",
+      description: "سِجِل هو تطبيق مخصص لأصحاب المحلات والبقالات لتسجيل وتنظيم عمليات التحويل البنكي بسهولة، مع البحث السريع والإحصائيات اليومية ودعم العمل بدون إنترنت من خلال تقنية PWA.",
+      image: "/project3.jpg",
+      url: "https://sijil-app-api-server-xfnt.vercel.app/",
+      anim: useFadeIn(500),
+    }
   ];
   return (
     <section id='work'
@@ -422,10 +423,20 @@ export default function Portfolio() {
         {/* Header Section */}
         <div ref={headerAnim.ref} className={`flex flex-col md:flex-row justify-between items-end mb-24 gap-8 border-b border-white/10 pb-12 ${headerAnim.className}`}>
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#7C3AED]" />
-              <span className="text-sm font-mono tracking-widest text-[#7C3AED] uppercase" dir="ltr">اعمالنا</span>
-            </div>
+            <div 
+                className="inline-flex w-fit items-center justify-center px-4 py-1.5 rounded-full backdrop-blur-sm mb-6"
+                style={{
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  background: 'rgba(255,255,255,0.03)'
+                }}
+              >
+                <span className="w-2 h-2 rounded-full mr-2 ml-2 animate-pulse" style={{ backgroundColor: '#2959DF' }} />
+                <span className="text-sm font-semibold tracking-wider text-[#EAEAF0]">اعمالنا</span>
+              </div>
+            {/* <div className="flex items-center gap-3 mb-6"> */}
+              {/* <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#7C3AED]" /> */}
+              {/* <span className="text-sm font-mono tracking-widest text-[#7C3AED] uppercase" dir="ltr">اعمالنا</span> */}
+            {/* </div> */}
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white mb-6">
             نتائج حقيقية… وتجارب رقمية تصنع الفرق<br/>
             </h2>
@@ -445,8 +456,7 @@ export default function Portfolio() {
             <div 
               key={idx}
               ref={project.anim.ref}
-              className={`flex flex-col project-card rounded-[2rem] p-6 lg:p-8 ${project.anim.className}`}
-            >
+              className={`flex flex-col justify-center items-center project-card rounded-[2rem] p-6 lg:p-8 ${project.anim.className}`}>
               {/* Top: Image Section */}
               <div className="w-full mb-8 relative image-container flex-grow-0">
                   <img 
@@ -479,7 +489,6 @@ export default function Portfolio() {
         </div>
       </div>
     </section>
-
 );
 }
 

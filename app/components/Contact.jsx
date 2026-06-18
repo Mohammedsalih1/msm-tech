@@ -69,6 +69,12 @@ export default function ContactAndFooter() {
           fontFamily: "'Tajawal', system-ui, sans-serif" 
         }}
       >
+        <div 
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle at 70% 40%, rgba(124,58,237,0.25), transparent 60%)'
+        }}
+      />
         <style>
           {`
             .glass-form {
@@ -326,7 +332,7 @@ export default function ContactAndFooter() {
               <ul className="flex flex-col gap-4">
                 <li><a href="#" className="footer-link">الرئيسية</a></li>
                 <li><a href="#about" className="footer-link">من نحن</a></li>
-                <li><a href="#services" className="footer-link">خدماتنا</a></li>
+                <li><a href="#service" className="footer-link">خدماتنا</a></li>
                 <li><a href="#work" className="footer-link">أعمالنا</a></li>
                 <li><a href="#contact" className="footer-link">تواصل معنا</a></li>
               </ul>

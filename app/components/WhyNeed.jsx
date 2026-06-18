@@ -63,6 +63,7 @@ export default function WhyNeedWebsite() {
         fontFamily: "'Tajawal', system-ui, sans-serif" 
       }}
     >
+      
       <style>
         {`
           .accordion-card {

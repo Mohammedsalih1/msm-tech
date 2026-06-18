@@ -44,7 +44,14 @@ export default function AboutUs() {
         backgroundColor: '#0B0B14',
         // boxShadow: 'inset 0 0 150px rgba(0,0,0,0.6)'
       }}
+      
     >
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle at 70% 40%, rgba(124,58,237,0.25), transparent 60%)'
+        }}
+      />
       <style>{`
         .animate-float {
           animation: float 6s ease-in-out infinite;
@@ -73,12 +80,8 @@ export default function AboutUs() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-[120px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Right Column (Mockup) */}
-
-          <div>
-            <Image src="/aboutus-image.jpeg" width="540" height="540" />
-          </div>
           {/* Left Column (Text side, Arabic RTL) */}
-          <div dir="rtl" className="order-2 lg:order-1  flex flex-col items-start font-sans" style={{ fontFamily: "'Tajawal', sans-serif" }}>
+          <div dir="rtl" className=" flex flex-col items-start font-sans" style={{ fontFamily: "'Tajawal', sans-serif" }}>
             
             <div ref={titleAnim.ref} className={`relative inline-block mb-6 ${titleAnim.className}`}>
               {/* Glow behind title */}
@@ -95,7 +98,8 @@ export default function AboutUs() {
                   color: 'transparent'
                 }}
               >
-                شريكك الاستراتيجي في التحول الرقمي
+                ساعد مشروعك على الوصول إلى المزيد من العملاء بحضور رقمي احترافي
+                {/* شريكك الاستراتيجي في التحول الرقمي */}
               </h2>
             </div>
             <div ref={descAnim.ref} className={`flex flex-col gap-4 ${descAnim.className}`}>
@@ -148,7 +152,9 @@ export default function AboutUs() {
               ))}
             </div>
           </div>
-
+          <div>
+            <Image src="/aboutus-image.jpeg" width="540" height="540" />
+          </div>
         </div>
       </div>
     </section>
