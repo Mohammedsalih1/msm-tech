@@ -105,6 +105,20 @@ export default function Services() {
           }
         `}
       </style>
+
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle at 70% 40%, rgba(124,58,237,0.25), transparent 60%)'
+        }}
+      />
+      {/* <div 
+        className="absolute top-0 right-0 w-64 h-64 z-0 pointer-events-none rounded-full"
+        style={{
+          boxShadow: '0 0 200px rgba(124,58,237,0.15)'
+        }}
+      /> */}
+
       {/* Ambient Background Elements */}
       <div 
         className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] pointer-events-none"
