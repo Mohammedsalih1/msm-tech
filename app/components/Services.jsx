@@ -152,7 +152,7 @@ export default function Services() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             style={{ color: '#ffffff' }}
           >
-            نقدم حلول رقمية تصنع <br className="hidden sm:block"/>
+            نقدم لك حلول رقمية تصنع <br className="hidden sm:block"/>
             <span 
               className="inline-block mt-2"
               style={{
@@ -161,7 +161,7 @@ export default function Services() {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              الفرق الحقيقي
+              الفارق الحقيقي
             </span>
           </h2>
           {/* Subtitle */}

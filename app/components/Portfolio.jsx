@@ -285,6 +285,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ExternalLink, Github, Code2, Layers, Cpu } from 'lucide-react';
 import PrimaryBtn from '../ui/PrimaryBtn';
+import Image from 'next/image';
 function useFadeIn(delay = 0) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -376,7 +377,7 @@ export default function Portfolio() {
              overflow: hidden;
              border-radius: 1.5rem;
              width: 100%;
-             aspect-ratio: 16/10;
+            //  aspect-ratio: 16/10;
           }
           @media (min-width: 1024px) {
               .image-container {
@@ -438,7 +439,7 @@ export default function Portfolio() {
               {/* <span className="text-sm font-mono tracking-widest text-[#7C3AED] uppercase" dir="ltr">اعمالنا</span> */}
             {/* </div> */}
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-white mb-6">
-            نتائج حقيقية… وتجارب رقمية تصنع الفرق<br/>
+            نتائج حقيقية… وتجارب رقمية تصنع الفارق<br/>
             </h2>
             <p className="text-lg text-[#9CA3AF] max-w-xl leading-relaxed">
             عملاؤنا لا يحصلون على مواقع فقط،
@@ -459,7 +460,7 @@ export default function Portfolio() {
               className={`flex flex-col justify-center items-center project-card rounded-[2rem] p-6 lg:p-8 ${project.anim.className}`}>
               {/* Top: Image Section */}
               <div className="w-full mb-8 relative image-container flex-grow-0">
-                  <img 
+                  <Image width={500} height={500}
                     src={project.image} 
                     alt={project.title} 
                     className="project-image"

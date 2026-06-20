@@ -120,7 +120,7 @@ export default function AboutUs() {
               ref={visionAnim.ref}
               className={`text-2xl font-semibold mt-10 mb-12 text-white text-right ${visionAnim.className}`}
             >
-              نصنع قيمة رقمية مستدامة تبني الثقة، وتحقق النمو.
+              نصنع لك قيمة رقمية مستدامة تبني الثقة، وتحقق النمو.
             </p>
             {/* Stats Grid */}
             <div 
