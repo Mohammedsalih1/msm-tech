@@ -25,6 +25,7 @@ function useFadeIn(delay = 0) {
   };
 }
 export default function Services() {
+
   const headerAnim = useFadeIn(0);
   const cards = [
     {
@@ -112,6 +113,13 @@ export default function Services() {
           background: 'radial-gradient(circle at 70% 40%, rgba(124,58,237,0.25), transparent 60%)'
         }}
       />
+
+      {/* <div 
+      className="absolute inset-0 z-0 pointer-events-none"
+      style={{
+        background: 'linear-gradient(135deg, rgba(124,58,237,0.22) 0%, rgba(124,58,237,0.07) 100%)'
+      }}
+    /> */}
       {/* <div 
         className="absolute top-0 right-0 w-64 h-64 z-0 pointer-events-none rounded-full"
         style={{
@@ -209,8 +217,7 @@ export default function Services() {
 </div>
 </div>
 ))}
-</div>
-
+        </div>
   </div>
 </section>
 

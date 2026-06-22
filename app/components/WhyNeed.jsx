@@ -31,15 +31,15 @@ export default function WhyNeedWebsite() {
   const cards = [
     {
       title: "ثقة أكبر لدى العملاء",
-      content: "الموقع الإلكتروني يعطي انطباعاً بأن مشروعك جاد واحترافي، ويجعل العملاء يشعرون بالاطمئنان عند التعامل معك."
+      content: "الموقع الإلكتروني يعكس مدى جدية و احترافية مشروعك، يبني جسر الثقة بينك و بين عملائك "
     },
     {
       title: "عرض خدماتك بشكل احترافي",
-      content: "يمكنك تقديم خدماتك وأعمالك السابقة ومعلومات التواصل بطريقة منظمة تعكس جودة مشروعك."
+      content: "هو الواجهة الرئيسية التي تعكس صوره مشروعك و جوده ما تقدمه من خدمات"
     },
     {
       title: "بناء علامة تجارية قوية",
-      content: "امتلاك موقع إلكتروني يمنح مشروعك هوية رقمية مستقلة تعزز حضورك وتجعلك أكثر تميزاً عن المنافسيك."
+      content: "امتلاك موقع إلكتروني يمنح مشروعك هوية رقمية مستقلة تعزز حضورك وتجعلك أكثر تميزاً عن منافسيك."
     }
     // {
     //   title: "الظهور في نتائج البحث",
@@ -63,6 +63,12 @@ export default function WhyNeedWebsite() {
         fontFamily: "'Tajawal', system-ui, sans-serif" 
       }}
     >
+    {/* <div 
+      className="absolute inset-0 z-0 pointer-events-none"
+      style={{
+        background: 'linear-gradient(135deg, rgba(124,58,237,0.22) 0%, rgba(124,58,237,0.07) 100%)'
+      }}
+    /> */}
       
       <style>
         {`
@@ -94,6 +100,7 @@ export default function WhyNeedWebsite() {
           `
         }}
       />
+      
       <div className="container mx-auto px-6 lg:px-10 relative z-10 max-w-5xl">
         
         {/* Header Section */}

@@ -10,7 +10,9 @@ import TrustAndTestimonials from "./components/Testemonals";
 
 export default function Home() {
   return (
+    
     <div>
+      
       {/* <Navbar /> */}
       <NavLinks />
       <Hero />

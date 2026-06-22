@@ -156,11 +156,13 @@ export default function Hero() {
               className={`text-base sm:text-lg md:text-[16px] text-right leading-relaxed max-w-150 transition-all duration-1000 delay-200 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ color: '#A1A1B3' }}
             >
-              في MSM Tech لا نبني مجرد مواقع إلكترونية،
+            نصنع تجارب رقمية احترافية تعكس هوية عملك وتدعم نموك في السوق الرقمي المتسارع. هندسة برمجية متقدمة وتصميم استثنائي.
+
+              {/* في MSM Tech لا نبني مجرد مواقع إلكترونية،
               بل نصنع تجارب رقمية تعكس هويتك، تعزز مكانتك،
               وتضعك في المكان الذي تستحقه في عالم التكنولوجيا.
               نصمم، نطوّر، ونبتكر حلولاً برمجية احترافية
-              تُظهر علامتك التجارية بأقوى صورة ممكنة.
+              تُظهر علامتك التجارية بأقوى صورة ممكنة. */}
             </p>
 
             {/* CTA Button */}

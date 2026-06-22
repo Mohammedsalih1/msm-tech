@@ -1,6 +1,7 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 import { Cairo, Tajawal } from "next/font/google"
 import "./globals.css";
+import ScrollToTop from "./components/ScrollTop";
 
 
 const cairo = Cairo({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         className={tajawal.className}
       >
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );
